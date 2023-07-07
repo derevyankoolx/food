@@ -412,7 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dots[slideIndex - 1].style.opacity = 1;
     }
 
-    function fSlide() {
+    function currentSlide() {
         if (slides.length < 10) {
             current.textContent = `0${slideIndex}`;
         } else {
@@ -435,7 +435,7 @@ document.addEventListener('DOMContentLoaded', () => {
             slideIndex++;
         }
 
-        fSlide();
+        currentSlide();
 
         showDot();
     });
@@ -455,7 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
             slideIndex--;
         }
 
-        fSlide();
+        currentSlide();
 
         showDot();
     });
@@ -469,7 +469,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             slidesField.style.transform = `translateX(-${offset}px)`;
 
-            fSlide();
+            currentSlide();
 
             showDot();
         });
